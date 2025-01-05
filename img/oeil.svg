@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 164 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-877.234,-681.365)">
+        <g id="Noeil">
+            <g transform="matrix(1.58353,0,0,1.58353,14.9969,535.496)">
+                <path d="M596.195,145.276C574.888,145.276 556.036,134.793 544.502,118.701C556.036,102.598 574.888,92.116 596.195,92.116C617.503,92.116 636.354,102.598 647.888,118.701C636.354,134.793 617.503,145.276 596.195,145.276Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1.58353,0,0,1.58353,14.9969,535.496)">
+                <path d="M619.869,118.696C619.869,131.771 609.27,142.37 596.195,142.37C583.12,142.37 572.521,131.771 572.521,118.696C572.521,105.621 583.12,95.022 596.195,95.022C609.27,95.022 619.869,105.621 619.869,118.696Z" style="fill:rgb(224,130,242);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.844808,0,0,0.844809,455.422,623.18)">
+                <path d="M619.869,118.696C619.869,131.771 609.27,142.37 596.195,142.37C583.12,142.37 572.521,131.771 572.521,118.696C572.521,105.621 583.12,95.022 596.195,95.022C609.27,95.022 619.869,105.621 619.869,118.696Z" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>

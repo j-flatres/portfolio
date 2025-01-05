@@ -1,0 +1,341 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Bauhaus";
+  src: url("fonts/bauhaus.ttf") format("truetype");
+}
+body {
+  background-color: #F6EFE5;
+  font-family: "Bauhaus";
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Barre de navigation, contenu principal, footer */
+  min-height: 100vh;
+  cursor: none;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+nav {
+  padding: 25px 50px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+
+nav {
+  position: fixed; /* Fixe la barre de navigation en haut de la page */
+  top: 0; /* La place tout en haut */
+  left: 0; /* Positionne à gauche */
+  width: 95%; /* La barre prend toute la largeur */
+  background-color: #F6EFE5; /* Choisis une couleur de fond */
+  z-index: 1000; /* Pour s'assurer qu'elle reste au-dessus du contenu */
+  padding: 25px 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  border-radius: 5px;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 80px;
+  bottom: -5px;
+  height: 1px;
+  background-color: black;
+}
+
+nav {
+  transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: #F6EFE5; /* Couleur foncée quand on scroll */
+}
+
+/* MAIN MAIN MAIN MAIN MAIN MAIN */
+main {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 150px;
+  font-weight: 200;
+  margin: 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* Image d'accueil */
+.center-image {
+  width: 250px; /* Largeur fixe */
+  height: auto; /* Hauteur auto pour préserver les proportions */
+}
+
+/* FIN MAIN */
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f6efe5;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(100%);
+  opacity: 0; /* Par défaut invisible */
+}
+
+footer.visible {
+  transform: translateY(0);
+  opacity: 1; /* Devient visible */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 80px;
+  bottom: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+/* FIN FOOTER */
+/* ONE PAGE SCROLL*/
+section {
+  padding: 100px 20px; /* Espacement pour chaque section */
+  min-height: 100vh; /* Chaque section occupe une hauteur d'écran */
+}
+
+#accueil {
+  background-color: #F6EFE5;
+}
+
+#projets {
+  background-color: #F6EFE5;
+}
+
+#apropos {
+  background-color: #F6EFE5;
+}
+
+#contact {
+  background-color: #F6EFE5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+  color: #cd3bb7;
+}
+
+#scrollToTop {
+  position: fixed; /* Fixe le bouton */
+  bottom: 20px; /* Place à 20px du bas de la page */
+  right: 20px; /* Place à 20px de la droite de la page */
+  background-color: transparent; /* Fond transparent, l'image est déjà le bouton */
+  border: none;
+  border-radius: 50%; /* Forme ronde autour de l'image */
+  padding: 10px; /* Un peu d'espace autour de l'image */
+  cursor: pointer; /* Curseur pointer */
+  transition: opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease; /* Transition sur l'opacité et le zoom */
+  display: none; /* Caché par défaut */
+}
+
+#scrollToTop img {
+  width: 40px; /* Largeur de l'image */
+  height: 40px; /* Hauteur de l'image */
+  -o-object-fit: cover;
+     object-fit: cover; /* S'assure que l'image est bien redimensionnée sans déformation */
+  border-radius: 50%; /* S'assure que l'image est ronde */
+  transition: transform 0.3s ease; /* Transition sur le zoom de l'image */
+}
+
+#scrollToTop:hover {
+  transform: scale(1.2); /* Agrandissement du bouton au survol */
+  padding: 15px; /* Agrandit le cercle autour de l'image */
+}
+
+#scrollToTop:hover img {
+  opacity: 0.8; /* Légère diminution de l'opacité de l'image */
+  transform: scale(1.15); /* Agrandit l'image au survol */
+}
+
+/*PROJETS*/
+:root {
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.hero-section {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.card {
+  list-style: none;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1) contrast(1.2);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+  filter: brightness(1) saturate(0) contrast(1) blur(10px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+/*FIN PROJETS/
+
+
+/*FIN ONE PAGE */
+/* Curseur */
+#custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.1s, height 0.1s;
+  z-index: 10000; /* S'assurer que la tâche reste au-dessus de tout */
+}
+
+/*FIN CURSEUR */
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  nav ul li a {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
