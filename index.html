@@ -74,7 +74,7 @@
             </a>
             <a class="card" href="projet3.html">
               <div class="card__background"
-                style="background-image: url(/Portfolio/img/couverture_livret.png)">
+                style="background-image: url(/portfolio/img/couverture_livret.png)">
               </div>
               <div class="card__content">
                 <p class="card__category">Communication</p>
@@ -83,7 +83,7 @@
               </li>
               <a class="card" href="projet4.html">
                 <div class="card__background"
-                  style="background-image: url(/Portfolio/img/compage1.png)">
+                  style="background-image: url(/portfolio/img/compage1.png)">
                 </div>
                 <div class="card__content">
                   <p class="card__category">Audiovisuel</p>
@@ -102,16 +102,36 @@
     <!-- Section À propos -->
     <section id="apropos">
       <h2>À propos</h2>
-      <img id="photomoi" src="/Portfolio/img/moi.JPG">
+      <img id="photomoi" src="/portfolio/img/moi.JPG">
       <p></p>
     </section>
 
     <!-- Section Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email : flatresjoan@gmail.com</p>
+      <form action="traitement.php" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Nom" required>
+        </div>
+        <div class="form-group">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject"></label>
+          <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        </div>
+        <div class="form-group">
+          <label for="message"></label>
+          <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">ENVOYER</button>
+      </form>
     </section>
-    <!-- Bouton Retour en Haut -->
+
+
+   
     <button id="scrollToTop" title="Retour en haut">
       <img src="/portfolio/img/nord.png" alt="Retour en haut" />
     </button>

@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY + window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    // Si on arrive en bas de la page, on affiche le footer
+  
     if (scrollPosition >= documentHeight - 10) {
         footer.classList.add('visible');
     } else {
@@ -36,19 +36,19 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-        nav.classList.add('scrolled'); // Applique l'effet de changement de couleur
+        nav.classList.add('scrolled'); 
     } else {
         nav.classList.remove('scrolled');
     }
 });
 
-const sections = document.querySelectorAll('section'); // Toutes les sections
-const navLinks = document.querySelectorAll('nav ul li a'); // Tous les liens du menu
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
     let currentSection = '';
 
-    // Parcourt les sections pour trouver celle qui est visible
+  
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
@@ -58,44 +58,44 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // Met à jour les classes actives des liens
+  
     navLinks.forEach((link) => {
-        link.classList.remove('active'); // Retire la classe active de tous les liens
+        link.classList.remove('active'); 
         if (link.getAttribute('href').includes(currentSection)) {
-            link.classList.add('active'); // Ajoute la classe active au lien correspondant
+            link.classList.add('active'); 
         }
     });
 });
 
-// Récupère le bouton "Retour en haut"
+
 const scrollToTopButton = document.getElementById("scrollToTop");
 
-// Affiche ou masque le bouton en fonction de la position du scroll
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) { // Quand on a scrollé de 300px
-        scrollToTopButton.style.display = 'block'; // Affiche le bouton
+    if (window.scrollY > 300) { 
+        scrollToTopButton.style.display = 'block';
     } else {
-        scrollToTopButton.style.display = 'none'; // Cache le bouton
+        scrollToTopButton.style.display = 'none';
     }
 });
 
-// Ajoute l'événement de clic pour faire défiler la page vers le haut
+
 scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Défile doucement vers le haut
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
 });5
 
 
-// Sélectionner l'élément du curseur
+
 const cursor = document.getElementById("custom-cursor");
 
 window.addEventListener("mousemove", (e) => {
-  // Positionner la tâche en suivant la souris
+
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 
-  // Calculer la vitesse de la souris et ajuster la taille de la tâche
+
   const speed = Math.sqrt(e.movementX ** 2 + e.movementY ** 2);
-  const size = Math.min(40, 20 + speed * 0.5); // Ajustez ces valeurs pour l'effet souhaité
+  const size = Math.min(40, 20 + speed * 0.5);
   cursor.style.width = `${size}px`;
   cursor.style.height = `${size}px`;
 });

@@ -3,7 +3,7 @@
     src: url('../fonts/bauhausregular-webfont.woff2') format('truetype'),
     url('fonts/bauhausregular-webfont.woff') format('woff'),
     url('fonts/bauhaus.ttf') format('truetype');
-font-display: swap;;
+font-display: swap;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Barre de navigation, contenu principal, footer */
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     cursor: none;
 }
@@ -31,12 +31,12 @@ nav {
 }
 
 nav {
-    position: fixed; /* Fixe la barre de navigation en haut de la page */
-    top: 0; /* La place tout en haut */
-    left: 0; /* Positionne à gauche */
-    width: 95%; /* La barre prend toute la largeur */
-    background-color: #F6EFE5; /* Choisis une couleur de fond */
-    z-index: 1000; /* Pour s'assurer qu'elle reste au-dessus du contenu */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 95%; 
+    background-color: #F6EFE5;
+    z-index: 1000; 
     padding: 25px 50px;
    
 }
@@ -82,7 +82,7 @@ nav {
 }
 
 nav.scrolled {
-    background-color: #F6EFE5; /* Couleur foncée quand on scroll */
+    background-color: #F6EFE5;
 
   }
 
@@ -105,10 +105,10 @@ h2 {
 }
 
 
-/* Image d'accueil */
+
 .center-image {
-    width: 250px; /* Largeur fixe */
-    height: auto; /* Hauteur auto pour préserver les proportions */
+    width: 250px;
+    height: auto;
 }
 
 
@@ -126,12 +126,12 @@ footer {
     padding: 10px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(100%);
-    opacity: 0; /* Par défaut invisible */
+    opacity: 0;
 }
 
 footer.visible {
     transform: translateY(0);
-    opacity: 1; /* Devient visible */
+    opacity: 1; 
 }
 
 
@@ -151,8 +151,8 @@ footer::before {
 /* ONE PAGE SCROLL*/
 
 section {
-    padding: 100px 20px; /* Espacement pour chaque section */
-    min-height: 100vh;   /* Chaque section occupe une hauteur d'écran */
+    padding: 100px 20px;
+    min-height: 100vh;   
 }
 
 
@@ -187,35 +187,35 @@ nav ul li a.active {
 }
 
 #scrollToTop {
-    position: fixed; /* Fixe le bouton */
-    bottom: 20px; /* Place à 20px du bas de la page */
-    right: 20px; /* Place à 20px de la droite de la page */
-    background-color: transparent; /* Fond transparent, l'image est déjà le bouton */
+    position: fixed; 
+    bottom: 20px;
+    right: 20px; 
+    background-color: transparent; 
     border: none;
-    border-radius: 50%; /* Forme ronde autour de l'image */
-    padding: 10px; /* Un peu d'espace autour de l'image */
-    cursor: pointer; /* Curseur pointer */
+    border-radius: 50%;
+    padding: 10px; 
+    cursor: pointer;
 
-    transition: opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease; /* Transition sur l'opacité et le zoom */
-    display: none; /* Caché par défaut */
+    transition: opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+    display: none;
 }
 
 #scrollToTop img {
-    width: 40px; /* Largeur de l'image */
-    height: 40px; /* Hauteur de l'image */
-    object-fit: cover; /* S'assure que l'image est bien redimensionnée sans déformation */
-    border-radius: 50%; /* S'assure que l'image est ronde */
-    transition: transform 0.3s ease; /* Transition sur le zoom de l'image */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
 }
 
 #scrollToTop:hover {
-    transform: scale(1.2); /* Agrandissement du bouton au survol */
-    padding: 15px; /* Agrandit le cercle autour de l'image */
+    transform: scale(1.2);
+    padding: 15px; 
 }
 
 #scrollToTop:hover img {
-    opacity: 0.8; /* Légère diminution de l'opacité de l'image */
-    transform: scale(1.15); /* Agrandit l'image au survol */
+    opacity: 0.8; 
+    transform: scale(1.15); 
 }
 
 
@@ -354,7 +354,7 @@ nav ul li a.active {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: width 0.1s, height 0.1s;
-    z-index: 10000; /* S'assurer que la tâche reste au-dessus de tout */
+    z-index: 10000;
 }
 
 
@@ -362,20 +362,20 @@ nav ul li a.active {
 
 .image-text-section {
   display: flex;
-  align-items: center; /* Centre verticalement l'image et le texte */
-  gap: 20px; /* Espace entre l'image et le texte */
+  align-items: center;
+  gap: 20px;
   padding: 20px;
 }
 
 .left-image {
   margin-left: 10%;
-  max-width: 26%; /* Limite la largeur de l'image */
-  height: auto; /* Conserve les proportions */
+  max-width: 26%;
+  height: auto;
   border-radius: 8px;
 }
 
 .right-text {
-  flex: 1; /* Prend tout l'espace restant */
+  flex: 1;
 }
 
 .right-text p {
@@ -406,8 +406,80 @@ margin-left: 3%;
 #photomoi {
   height: auto;
   width: 30%;
+  border-radius: 40px;
 }
 
+
+
+/*CONTACT */
+
+#contact {
+  max-width: 600px;
+  height: 20px;
+  margin: 50px auto;
+  background: #F6EFE5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+ 
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #F6EFE5;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  font-family: 'Bauhaus';
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: #000000;
+  color: #F6EFE5;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Bauhaus';
+}
+
+.btn-submit:hover {
+  background-color: #000000;
+}
+
+
+/* FIN CONTACT */
 
 /* Responsive Design */
 @media (max-width: 768px) {
