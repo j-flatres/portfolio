@@ -100,4 +100,3 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.height = `${size}px`;
 });
 
-

@@ -1,6 +1,9 @@
 @font-face {
     font-family: 'Bauhaus';
-    src: url('fonts/bauhaus.ttf') format('truetype');
+    src: url('../fonts/bauhausregular-webfont.woff2') format('truetype'),
+    url('fonts/bauhausregular-webfont.woff') format('woff'),
+    url('fonts/bauhaus.ttf') format('truetype');
+font-display: swap;;
 }
 
 body {
@@ -357,6 +360,53 @@ nav ul li a.active {
 
 /*FIN CURSEUR */
 
+.image-text-section {
+  display: flex;
+  align-items: center; /* Centre verticalement l'image et le texte */
+  gap: 20px; /* Espace entre l'image et le texte */
+  padding: 20px;
+}
+
+.left-image {
+  margin-left: 10%;
+  max-width: 26%; /* Limite la largeur de l'image */
+  height: auto; /* Conserve les proportions */
+  border-radius: 8px;
+}
+
+.right-text {
+  flex: 1; /* Prend tout l'espace restant */
+}
+
+.right-text p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+#imglogiciels{
+
+  height: auto;
+  max-width: 30%;
+}
+
+#livret {
+margin-left: 3%;
+  height: auto;
+  width: 50%;
+}
+
+#commmi {
+
+  margin-left: 3%;
+  height: auto;
+  width: 40%;
+}
+
+#photomoi {
+  height: auto;
+  width: 30%;
+}
 
 
 /* Responsive Design */
