@@ -10,15 +10,12 @@
 
 <body>
 
-
   <div id="custom-cursor"></div>
-
-
-
 
   <nav>
     <div class="logo">BUT MMi</div>
-    <ul>
+    <div class="burger-menu" onclick="toggleMenu()">☰</div>
+    <ul id="main-menu">
       <li><a href="#accueil">Accueil</a></li>
       <li><a href="#projets">Projets</a></li>
       <li><a href="#apropos">À propos</a></li>
@@ -27,14 +24,15 @@
   </nav>
 
   <main>
-    
+
+
+
     <!-- Section Accueil -->
     <section id="accueil">
       <h1>Portfolio</h1>
       <h2>Joan Flatres</h2>
       <div class="image-container">
-        <img src="/portfolio/img/accueil.svg" alt="Points noirs bauhaus" class="center-image">
-
+        <img src="/portfolio_test/img/accueil.svg" alt="Points noirs bauhaus" class="center-image">
       </div>
       <footer>
         <p>Communication</p>
@@ -45,70 +43,61 @@
     <section id="projets">
       <h2>Mes Projets</h2>
       <div class="projet">
-
-
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-
-      
-
         <section class="hero-section">
           <div class="card-grid">
-
             <a class="card" href="projet1.html">
-      <div class="card__background" style="background-image: url(/portfolio/img/Affiche_première_échapée.jpg)"></div>
-      <div class="card__content">
-        <p class="card__category">Graphisme</p>
-        <h3 class="card__heading">Échappée de Luzel</h3>
-      </div>
-    </a> 
-
-
-            <a class="card" href="projet2.html">
-              <div class="card__background" style="background-image: url(/portfolio/img/Bretagne\ Ladies\ Tour.png)">
+              <div class="card__background" style="background-image: url(/portfolio/img/Affiche_première_échapée.jpg)"></div>
+              <div class="card__content">
+                <p class="card__category">Graphisme</p>
+                <h3 class="card__heading">Échappée de Luzel</h3>
               </div>
+            </a>
+            <a class="card" href="projet2.html">
+              <div class="card__background" style="background-image: url(/portfolio_test/img/Bretagne\ Ladies\ Tour.png)"></div>
               <div class="card__content">
                 <p class="card__category">Événementiel</p>
                 <h3 class="card__heading">Bretagne Ladies Tour</h3>
               </div>
             </a>
             <a class="card" href="projet3.html">
-              <div class="card__background"
-                style="background-image: url(/portfolio/img/couverture_livret.png)">
-              </div>
+              <div class="card__background" style="background-image: url(/portfolio_test/img/couverture_livret.png)"></div>
               <div class="card__content">
                 <p class="card__category">Communication</p>
                 <h3 class="card__heading">Livret des Associations</h3>
               </div>
-              </li>
-              <a class="card" href="projet4.html">
-                <div class="card__background"
-                  style="background-image: url(/portfolio/img/compage1.png)">
-                </div>
-                <div class="card__content">
-                  <p class="card__category">Audiovisuel</p>
-                  <h3 class="card__heading">La Com en MMi</h3>
-                </div>
-              </a>
-              <div>
+            </a>
+            <a class="card" href="projet4.html">
+              <div class="card__background" style="background-image: url(/portfolio_test/img/compage1.png)"></div>
+              <div class="card__content">
+                <p class="card__category">Audiovisuel</p>
+                <h3 class="card__heading">La Com en MMi</h3>
+              </div>
+            </a>
+          </div>
         </section>
-
-
-
-
-
+      </div>
     </section>
 
     <!-- Section À propos -->
     <section id="apropos">
       <h2>À propos</h2>
-      <img id="photomoi" src="/portfolio/img/moi.JPG">
-      <p></p>
+      <img id="photomoi" src="/portfolio_test/img/moi.JPG">
+      <p>
+    Je m'appelle Joan Flatres, étudiant en troisième année du <strong>BUT Métiers du Multimédia et de l’Internet (MMI)</strong> à l’IUT de Lannion. Passionné par la création numérique, je me spécialise dans le <strong>développement web, le design graphique et la communication visuelle.</strong>
+  </p>
+  <p>
+    Curieux, rigoureux et créatif, j’ai eu l’opportunité de travailler sur des projets variés, allant de la refonte d’<strong>identités visuelles</strong> à la conception de sites web en <strong>responsive design</strong>, en passant par la création de contenus optimisés pour le <strong>SEO</strong>.
+  </p>
+  <p>
+    Je recherche aujourd’hui des opportunités pour collaborer sur des projets ambitieux mêlant design, technologie et stratégie de communication. Mon objectif : concevoir des solutions numériques utiles, accessibles et visuellement impactantes.
+  </p>
+  <a href="./docs/CV_Joan_Flatres_BUT3.pdf" class="btn-submit">Voir mon CV</a>
     </section>
 
     <!-- Section Contact -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Me contacter</h2>
       <form action="traitement.php" method="POST" class="contact-form">
         <div class="form-group">
           <label for="name"></label>
@@ -130,35 +119,44 @@
       </form>
     </section>
 
-
-   
     <button id="scrollToTop" title="Retour en haut">
-      <img src="/portfolio/img/nord.png" alt="Retour en haut" />
+      <img src="/portfolio_test/img/nord.png" alt="Retour en haut" />
     </button>
 
-
-
-
- 
   </main>
 
-
-  <script src="/portfolio/js/script.js"></script>
+  <script src="../Portfolio_test/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("main-menu");
+    if (menu) {
+      menu.classList.toggle("active");
+    } else {
+      console.warn("⚠️ Menu introuvable !");
+    }
+  }
+</script>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("main-menu");
+    if (menu) menu.classList.toggle("active");
+  }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuLinks = document.querySelectorAll("#main-menu a");
+    const menu = document.getElementById("main-menu");
 
-
-
-
-
-
-
-
-
-
-
-
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (menu.classList.contains("active")) {
+          menu.classList.remove("active");
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 

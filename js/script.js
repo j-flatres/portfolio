@@ -100,3 +100,25 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.height = `${size}px`;
 });
 
+function toggleMenu() {
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("active");
+}
+
+function toggleMenu() {
+  const menu = document.getElementById("main-menu");
+  menu.classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("#main-menu a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      const menu = document.getElementById("main-menu");
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+      }
+    });
+  });
+});
+
